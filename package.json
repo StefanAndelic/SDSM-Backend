@@ -1,0 +1,22 @@
+{
+  "name": "scaleddatascience_rest_api",
+  "version": "1.0.0",
+  "description": "scale_data_science_rest_api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "stefan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.2",
+    "jest": "^27.5.1",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.7",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
