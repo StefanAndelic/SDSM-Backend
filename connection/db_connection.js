@@ -2,8 +2,7 @@
 const staging = require('../config/staging_env.json')
 const mongoose = require('mongoose')
 
-const URI =
-  'mongodb+srv://Team6:BEv7VDdBxpH4vUDK@cluster0.o3fhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.o3fhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 function db() {
   mongoose
