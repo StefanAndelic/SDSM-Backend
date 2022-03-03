@@ -20,15 +20,14 @@ const data = [
 ]
 
 async function connectDB() {
-  const URI =
-    'mongodb+srv://Team6:BEv7VDdBxpH4vUDK@cluster0.o3fhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+  const URI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.o3fhw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
   //`mongodb://localhost/${db.testing_db}`
   mongoose
     .connect(URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log(`Connected to ${db.testing_db} database`))
+    .then(() => console.log(`Connected to ${process.env.DB_USERNAME} database`)) //db.testing_db
     .catch((err) => error('Could not connect to DB...Please try again'))
 }
 
